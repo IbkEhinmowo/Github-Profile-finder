@@ -1,7 +1,14 @@
 import "./App.css";
+import Image from "./Image";
+import Profile from "./User";
 
 function App() {
-  return <h1>love</h1>;
+  return (
+    <div>
+      <Image />
+      <Profile />
+    </div>
+  );
 }
 
 export default App;

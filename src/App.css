@@ -1,8 +1,15 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0rem;
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0%;
+  background-color: #20293a;
+}
+.image-container img {
+  margin: auto;
+  max-width: 100vw;
+}
+p {
+  font-size: large;
+  font-weight: 500;
 }
 
 .logo {
@@ -10,9 +17,82 @@
   padding: 1.5em;
   will-change: filter;
 }
+.user-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 40px;
+  width: 80%;
+  max-width: 1000px;
+  align-items: center;
+}
+
+#followers,
+#following,
+#location {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+
+  margin: 5px; /* Adjust margins between items */
+  text-align: center; /* Center text horizontally */
+  border-radius: 10px;
+  background-color: #111729;
+  padding: 1%;
+}
+#location {
+  flex: 2; /* Adjust the ratio for the Location div to be larger */
+  width: 200px; /* Set a fixed width for the Location div */
+}
+#followers p:first-of-type,
+#following p:first-of-type,
+#location p:first-of-type {
+  color: #4a5567;
+  font-weight: 600;
+}
+
+.profile-image img {
+  max-width: 100%;
+  border-radius: 10%;
+}
+.profile-image {
+  background-color: #20293a;
+  position: relative;
+  bottom: 36px;
+  padding: 10px;
+  min-width: 100px;
+  width: 10%;
+  border-radius: 20px;
+}
+.profile-container {
+  display: flex;
+  margin: auto;
+  max-width: 80%;
+  justify-content: space-around;
+}
+#namebio {
+  margin: auto;
+  max-width: 74%;
+}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.line {
+  border: 0.6px solid #4a5567;
+  height: 50%;
+  margin: 5px;
+}
+@media only screen and (max-width: 767px) {
+  .image-container img {
+    transform: scale(1.7);
+    height: 20vh;
+  }
+  .image-container {
+    overflow: hidden;
+  }
 }
