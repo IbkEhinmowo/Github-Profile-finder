@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import heroImage from "./assets/hero-image-github-profile.png";
-import { useState } from "react";
+
 export default function Image({ onUsernameSubmit }) {
   const [username, setUsername] = useState("github");
 
@@ -9,6 +9,12 @@ export default function Image({ onUsernameSubmit }) {
     console.log("Form submitted with username:", username);
     onUsernameSubmit(username);
   };
+
+  const handleInputChange = (event) => {
+    const value = event.target.value;
+    setUsername(value);
+  };
+
   return (
     <div className="image-container">
       <form onSubmit={handleFormSubmit}>
@@ -16,7 +22,7 @@ export default function Image({ onUsernameSubmit }) {
           type="text"
           value={username}
           placeholder="Enter GitHub username"
-          onChange={(event) => setUsername(event.target.value)}
+          onChange={handleInputChange}
         />
         <button type="submit">Search</button>
       </form>

@@ -6,8 +6,10 @@ import { useState } from "react";
 function App() {
   const [user, setUser] = useState("");
 
-  function handleusername(event) {
-    setUser(event.target.value);
+  function handleusername(username) {
+    console.log(username); // Fix typo here
+
+    setUser(username);
   }
 
   return (
