@@ -95,3 +95,14 @@ p {
     overflow: hidden;
   }
 }
+.image-form {
+  display: flex;
+  width: fit-content;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+form {
+  padding: 2rem;
+  border: solid white;
+}

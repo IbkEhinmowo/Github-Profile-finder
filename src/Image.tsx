@@ -17,7 +17,7 @@ export default function Image({ onUsernameSubmit }) {
 
   return (
     <div className="image-container">
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className="image-form">
         <input
           type="text"
           value={username}
