@@ -30,3 +30,38 @@ export default function Image({ onUsernameSubmit }) {
     </div>
   );
 }
+// import React, { useState } from 'react';
+// import jsonData from './June';
+// import './App.css';
+
+// function App() {
+//   const [searchTerm, setSearchTerm] = useState('');
+
+//   return (
+//     <div className="App">
+//       <input
+//         type="text"
+//         placeholder="search..."
+//         onChange={(e) => {
+//           setSearchTerm(e.target.value);
+//         }}
+//       />
+//       {jsonData
+//         .filter((val) => {
+//           if (searchTerm == '') {
+//             return val;
+//           } else if (
+//             val.first_name.toLowerCase().includes(searchTerm.toLowerCase())
+//           ) {
+//             return val;
+//           }
+//           return false;
+//         })
+//         .map((value) => {
+//           return <h1 key={value.id}> {value.first_name} </h1>;
+//         })}
+//     </div>
+//   );
+// }
+
+// export default App;

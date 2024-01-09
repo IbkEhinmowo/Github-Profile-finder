@@ -25,6 +25,7 @@ p {
   width: 80%;
   max-width: 1000px;
   align-items: center;
+  max-width: 600px;
 }
 
 #followers,
@@ -34,16 +35,18 @@ p {
   justify-content: space-around;
   align-items: center;
   flex: 1;
+  font-size: smaller;
 
   margin: 5px; /* Adjust margins between items */
   text-align: center; /* Center text horizontally */
   border-radius: 10px;
   background-color: #111729;
-  padding: 1%;
+  padding: 0.7%;
 }
 #location {
-  flex: 2; /* Adjust the ratio for the Location div to be larger */
-  width: 200px; /* Set a fixed width for the Location div */
+  flex: 2.5; /* Adjust the ratio for the Location div to be larger */
+  width: 250px; /* Set a fixed width for the Location div */
+  max-height: 60%;
 }
 #followers p:first-of-type,
 #following p:first-of-type,
@@ -87,12 +90,28 @@ p {
   height: 50%;
   margin: 5px;
 }
+#projects {
+  display: flex;
+  justify-content: space-around;
+}
+.project-tile {
+  width: 30%;
+  background-image: linear-gradient(to right, #111729, #1d1b48);
+  border-radius: 20px;
+  padding: 10px;
+}
+.profile-container {
+}
 @media only screen and (max-width: 767px) {
   .image-container img {
     height: 20vh;
   }
   .image-container {
     overflow: hidden;
+  }
+  #namebio {
+    margin: auto;
+    max-width: 90%;
   }
 }
 .image-form {

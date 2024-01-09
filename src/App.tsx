@@ -1,6 +1,7 @@
 import "./App.css";
 import Image from "./Image";
 import Profile from "./User";
+import Projects from "./Project";
 import { useState } from "react";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div>
       <Image onUsernameSubmit={handleusername} />
       <Profile searchedName={user} />
+      <Projects />
     </div>
   );
 }
