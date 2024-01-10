@@ -78,6 +78,9 @@ p {
   margin: auto;
   max-width: 74%;
 }
+#namebio h1 {
+  font-weight: 500;
+}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -109,6 +112,7 @@ p {
   .image-container {
     overflow: hidden;
   }
+
   #namebio {
     margin: auto;
     max-width: 90%;
