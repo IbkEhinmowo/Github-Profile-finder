@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { useEffect } from "react";
 
-export default function User({ searchedName }) {
+export default function User({ searchedName, onUserDataUpdate }) {
   const [userData, setUserData] = useState("");
   console.log(searchedName); // checking searchedName
   const [loading, setLoading] = useState(false);
@@ -18,6 +18,7 @@ export default function User({ searchedName }) {
           const data = await response.json();
           setUserData(data);
           setError(null); // Reset error if data fetch is successful
+          onUserDataUpdate(data);
         } else {
           setError("User not found");
           setUserData(""); // Reset userData in case of error

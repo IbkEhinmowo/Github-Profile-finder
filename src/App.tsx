@@ -6,18 +6,22 @@ import { useState } from "react";
 
 function App() {
   const [user, setUser] = useState("");
+  const [userDataFromUserComponent, setUserDataFromUserComponent] =
+    useState(null);
 
   function handleusername(username) {
     console.log(username); // Fix typo here
-
     setUser(username);
   }
+  const handleUserDataUpdate = (userData) => {
+    setUserDataFromUserComponent(userData);
+  };
 
   return (
     <div>
       <Image onUsernameSubmit={handleusername} />
-      <Profile searchedName={user} />
-      <Projects />
+      <Profile searchedName={user} onUserDataUpdate={handleUserDataUpdate} />
+      <Projects userData={userDataFromUserComponent} />
     </div>
   );
 }
