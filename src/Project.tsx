@@ -34,7 +34,12 @@ export default function Projects({ userData }) {
             {repos.length > 0 ? (
               <ul>
                 {repos.map((repo) => (
-                  <li key={repo.id}>{repo.name}</li>
+                  <div key={repo.id} id="projects">
+                    <div className="project-tile">
+                      <span>{repo.name}</span>
+                      <span>{repo.description}</span>
+                    </div>
+                  </div>
                 ))}
               </ul>
             ) : (
