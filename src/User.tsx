@@ -44,7 +44,7 @@ export default function User({ searchedName, onUserDataUpdate }) {
   }
 
   if (!userData) {
-    return <div>No user data available</div>;
+    return <div></div>;
   }
 
   return (

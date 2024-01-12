@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import heroImage from "./assets/hero-image-github-profile.png";
+import heroImage from "./assets/hero-image-github-profile.jpg";
 
 export default function Image({ onUsernameSubmit }) {
   const [username, setUsername] = useState("github");

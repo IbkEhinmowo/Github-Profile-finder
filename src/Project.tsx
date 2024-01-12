@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from "react";
 
 export default function Projects({ userData }) {
   const [repos, setRepos] = useState([]);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     const fetchRepos = async () => {
@@ -26,38 +27,56 @@ export default function Projects({ userData }) {
     }
   }, [userData]);
 
+  const displayedRepos = showAll ? repos : repos.slice(0, 4);
+
   return (
     <Fragment>
       {userData ? (
         <div className="main">
           <div id="repositories">
-            {repos.length > 0 ? (
+            {displayedRepos.length > 0 ? (
               <ul>
-                {repos.map((repo) => (
+                {displayedRepos.map((repo) => (
                   <div key={repo.id} className="project-tile">
-                    <section id="name">{repo.name}</section>
-                    <section id="description">{repo.description}</section>
-                    <section className="stats">
-                      <section>
-                        <span>{repo.stargazers_count} </span>
+                    <a
+                      href={repo.html_url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                    >
+                      <section id="name">{repo.name}</section>
+                      <section id="description">{repo.description}</section>
+                      <section className="stats">
+                        <section>
+                          <span>{repo.stargazers_count} </span>
+                        </section>
+                        <section>{repo.forks_count}</section>
+                        <section>{repo.watchers_count}</section>
+                        <section>
+                          <span>last updated :</span>{" "}
+                          {new Date(repo.updated_at).toLocaleString()}
+                        </section>
                       </section>
-                      <section>{repo.forks_count}</section>
-                      <section>{repo.watchers_count}</section>
-                      <section>
-                        <span>last updated :</span>{" "}
-                        {new Date(repo.updated_at).toLocaleString()}
-                      </section>
-                    </section>
+                    </a>{" "}
                   </div>
                 ))}
               </ul>
             ) : (
               <p>No repositories found</p>
             )}
+            {!showAll && (
+              <h1>
+                <button onClick={() => setShowAll(true)} id="showallbtn">
+                  View All Repositories
+                </button>
+              </h1>
+            )}
           </div>
         </div>
       ) : (
-        <p>NOTHING TO SEE HERE</p>
+        <div className="error">
+          <p>NOTHING TO SEE HERE</p>
+        </div>
       )}
 
       <div></div>

@@ -1,11 +1,15 @@
 body {
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0%;
   background-color: #20293a;
 }
 .image-container img {
   margin: auto;
+  width: 100vw;
+  height: 40vh;
   max-width: 100vw;
+  object-fit: cover;
 }
 p {
   font-size: large;
@@ -93,10 +97,12 @@ p {
   height: 50%;
   margin: 5px;
 }
-
 ul {
   margin: 0;
   padding: 0;
+
+  text-emphasis: none;
+  color: white;
   flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
@@ -104,9 +110,20 @@ ul {
   margin: auto;
 }
 
+.project-link {
+  width: 100%;
+  height: 100%;
+  text-emphasis: none;
+  color: white;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 #repositories {
   margin: auto;
-
   max-width: 1250px;
 }
 .project-tile {
@@ -120,33 +137,55 @@ ul {
   padding: 15px;
   min-height: 100px;
   margin: 20px;
+
   #name {
     font-weight: 600;
   }
 
   #description {
     color: #4a5567;
+    font-weight: 600;
+    font-size: smaller;
 
     /* Add your styling for the description here */
   }
+}
+#showallbtn {
+  padding: 10px;
+  text-align: center;
+  border: none;
+  font-size: large;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .stats {
   display: flex;
   flex-direction: row;
+  align-items: start;
   section {
     color: #4a5567;
     margin: 5px;
     font: 1em sans-serif;
-    font-weight: 900;
-    font-size: small;
+    font-weight: 600;
+    font-size: smaller;
   }
+}
+.error {
+  color: #4a5567;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .profile-container {
 }
 @media only screen and (max-width: 767px) {
   .image-container img {
-    height: 20vh;
+    height: 30vh;
+    object-fit: cover;
   }
   .image-container {
     overflow: hidden;
