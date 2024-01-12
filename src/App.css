@@ -93,15 +93,35 @@ p {
   height: 50%;
   margin: 5px;
 }
-#projects {
+
+ul {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
+  list-style-type: none;
+}
+#repositories {
+  margin: auto;
+
+  max-width: 1250px;
 }
 .project-tile {
-  width: 30%;
+  min-width: 500px;
+  max-width: 500px;
   background-image: linear-gradient(to right, #111729, #1d1b48);
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 100px;
+  margin: 20px;
+  #name {
+    font-weight: 600;
+  }
+
+  #description {
+    color: #4a5567;
+
+    /* Add your styling for the description here */
+  }
 }
 .profile-container {
 }

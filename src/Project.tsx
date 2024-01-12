@@ -30,15 +30,12 @@ export default function Projects({ userData }) {
       {userData ? (
         <div className="main">
           <div id="repositories">
-            <h2>Repositories</h2>
             {repos.length > 0 ? (
               <ul>
                 {repos.map((repo) => (
-                  <div key={repo.id} id="projects">
-                    <div className="project-tile">
-                      <span>{repo.name}</span>
-                      <span>{repo.description}</span>
-                    </div>
+                  <div key={repo.id} className="project-tile">
+                    <section id="name">{repo.name}</section>
+                    <section id="description">{repo.description}</section>
                   </div>
                 ))}
               </ul>
