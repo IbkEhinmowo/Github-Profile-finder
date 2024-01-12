@@ -135,9 +135,10 @@ ul {
   display: flex;
   flex-direction: row;
   section {
+    color: #4a5567;
     margin: 5px;
     font: 1em sans-serif;
-    font-weight: 500;
+    font-weight: 900;
     font-size: small;
   }
 }

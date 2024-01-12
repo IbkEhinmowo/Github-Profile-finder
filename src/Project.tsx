@@ -38,10 +38,15 @@ export default function Projects({ userData }) {
                     <section id="name">{repo.name}</section>
                     <section id="description">{repo.description}</section>
                     <section className="stats">
-                      <section>{repo.stargazers_count}</section>
+                      <section>
+                        <span>{repo.stargazers_count} </span>
+                      </section>
                       <section>{repo.forks_count}</section>
                       <section>{repo.watchers_count}</section>
-                      <section>{repo.updated_at}</section>
+                      <section>
+                        <span>last updated :</span>{" "}
+                        {new Date(repo.updated_at).toLocaleString()}
+                      </section>
                     </section>
                   </div>
                 ))}
