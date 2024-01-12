@@ -22,6 +22,7 @@ export default function Projects({ userData }) {
 
     if (userData && userData.repos_url) {
       fetchRepos();
+      console.log(userData);
     }
   }, [userData]);
 
@@ -36,6 +37,12 @@ export default function Projects({ userData }) {
                   <div key={repo.id} className="project-tile">
                     <section id="name">{repo.name}</section>
                     <section id="description">{repo.description}</section>
+                    <section className="stats">
+                      <section>{repo.stargazers_count}</section>
+                      <section>{repo.forks_count}</section>
+                      <section>{repo.watchers_count}</section>
+                      <section>{repo.updated_at}</section>
+                    </section>
                   </div>
                 ))}
               </ul>
