@@ -19,7 +19,10 @@ function App() {
 
   return (
     <div>
-      <Image onUsernameSubmit={handleusername} />
+      <Image
+        onUsernameSubmit={handleusername}
+        userData={userDataFromUserComponent}
+      />
       <Profile searchedName={user} onUserDataUpdate={handleUserDataUpdate} />
       <Projects userData={userDataFromUserComponent} />
     </div>
