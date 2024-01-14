@@ -18,18 +18,6 @@ export default function Image({ onUsernameSubmit }) {
   };
 
   return (
-    // <div className="image-container">
-    //   <form onSubmit={handleFormSubmit} className="image-form">
-    //     <input
-    //       type="text"
-    //       value={username}
-    //       placeholder="Enter GitHub username"
-    //       onChange={handleInputChange}
-    //     />
-    //     <button type="submit">Search</button>
-    //   </form>
-    //   <img src={heroImage} alt="Hero" />
-    // </div>
     <div className="image-container">
       <form onSubmit={handleFormSubmit} className="image-form">
         <div className="search-bar">
@@ -48,38 +36,3 @@ export default function Image({ onUsernameSubmit }) {
     </div>
   );
 }
-// import React, { useState } from 'react';
-// import jsonData from './June';
-// import './App.css';
-
-// function App() {
-//   const [searchTerm, setSearchTerm] = useState('');
-
-//   return (
-//     <div className="App">
-//       <input
-//         type="text"
-//         placeholder="search..."
-//         onChange={(e) => {
-//           setSearchTerm(e.target.value);
-//         }}
-//       />
-//       {jsonData
-//         .filter((val) => {
-//           if (searchTerm == '') {
-//             return val;
-//           } else if (
-//             val.first_name.toLowerCase().includes(searchTerm.toLowerCase())
-//           ) {
-//             return val;
-//           }
-//           return false;
-//         })
-//         .map((value) => {
-//           return <h1 key={value.id}> {value.first_name} </h1>;
-//         })}
-//     </div>
-//   );
-// }
-
-// export default App;
