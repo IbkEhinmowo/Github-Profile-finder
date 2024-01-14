@@ -1,4 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faCodeFork } from "@fortawesome/free-solid-svg-icons";
 
 export default function Projects({ userData }) {
   const [repos, setRepos] = useState([]);
@@ -48,10 +50,17 @@ export default function Projects({ userData }) {
                       <section id="description">{repo.description}</section>
                       <section className="stats">
                         <section>
+                          <span style={{ marginRight: "5px" }}>
+                            <FontAwesomeIcon icon={faStar} />
+                          </span>
                           <span>{repo.stargazers_count} </span>
                         </section>
-                        <section>{repo.forks_count}</section>
-                        <section>{repo.watchers_count}</section>
+                        <section>
+                          <span style={{ marginRight: "5px" }}>
+                            <FontAwesomeIcon icon={faCodeFork} />
+                          </span>
+                          {repo.forks_count}
+                        </section>
                         <section>
                           <span>last updated :</span>{" "}
                           {new Date(repo.updated_at).toLocaleString()}

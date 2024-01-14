@@ -4,6 +4,49 @@ body {
   padding: 0%;
   background-color: #20293a;
 }
+.image-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  width: 24em;
+  display: flex;
+  background-color: #20293a;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+input {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  outline: none;
+  background-color: #20293a;
+  color: #fff;
+  /* Custom styling for the typing text */
+  font-family: "Poppins", sans-serif; /* Choose your preferred font-family */
+  font-size: 14px; /* Adjust the font size */
+  font-weight: 400; /* Adjust the font weight (e.g., bold, normal) */
+  letter-spacing: 1px; /* Adjust letter spacing if needed */
+}
+
+button {
+  background-color: #20293a;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #394867;
+}
+
+/* Adjust the icon color if needed */
+.image-container svg {
+  color: #fff;
+}
 .image-container img {
   margin: auto;
   width: 100vw;
@@ -211,5 +254,4 @@ ul {
 }
 form {
   padding: 2rem;
-  border: solid white;
 }

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import heroImage from "./assets/hero-image-github-profile.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Image({ onUsernameSubmit }) {
   const [username, setUsername] = useState("github");
@@ -16,15 +18,31 @@ export default function Image({ onUsernameSubmit }) {
   };
 
   return (
+    // <div className="image-container">
+    //   <form onSubmit={handleFormSubmit} className="image-form">
+    //     <input
+    //       type="text"
+    //       value={username}
+    //       placeholder="Enter GitHub username"
+    //       onChange={handleInputChange}
+    //     />
+    //     <button type="submit">Search</button>
+    //   </form>
+    //   <img src={heroImage} alt="Hero" />
+    // </div>
     <div className="image-container">
       <form onSubmit={handleFormSubmit} className="image-form">
-        <input
-          type="text"
-          value={username}
-          placeholder="Enter GitHub username"
-          onChange={handleInputChange}
-        />
-        <button type="submit">Search</button>
+        <div className="search-bar">
+          <input
+            type="text"
+            value={username}
+            placeholder="Enter GitHub username"
+            onChange={handleInputChange}
+          />
+          <button type="submit">
+            <FontAwesomeIcon icon={faSearch} />
+          </button>
+        </div>
       </form>
       <img src={heroImage} alt="Hero" />
     </div>
