@@ -22,6 +22,7 @@ export default function User({ searchedName, onUserDataUpdate }) {
         } else {
           setError("User not found");
           setUserData(""); // Reset userData in case of error
+          onUserDataUpdate("");
         }
       } catch (error) {
         setError("Error fetching user data");
@@ -40,7 +41,7 @@ export default function User({ searchedName, onUserDataUpdate }) {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="error2">Error: {error}</div>;
   }
 
   if (!userData) {
@@ -82,7 +83,9 @@ export default function User({ searchedName, onUserDataUpdate }) {
             </div>
           </div>
         ) : (
-          <p>Loading...</p>
+          <div className="loading">
+            <h2>Loading...</h2>
+          </div>
         )}
 
         <div></div>

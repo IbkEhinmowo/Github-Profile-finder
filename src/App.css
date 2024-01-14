@@ -25,10 +25,10 @@ input {
   background-color: #20293a;
   color: #fff;
   /* Custom styling for the typing text */
-  font-family: "Poppins", sans-serif; /* Choose your preferred font-family */
-  font-size: 14px; /* Adjust the font size */
-  font-weight: 400; /* Adjust the font weight (e.g., bold, normal) */
-  letter-spacing: 1px; /* Adjust letter spacing if needed */
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 button {
@@ -88,10 +88,11 @@ p {
   text-align: center; /* Center text horizontally */
   border-radius: 10px;
   background-color: #111729;
-  padding: 0.7%;
+  padding-left: 0.8%;
+  padding-right: 0.8%;
 }
 #location {
-  flex: 2.5; /* Adjust the ratio for the Location div to be larger */
+  flex: 2.5;
   width: 250px; /* Set a fixed width for the Location div */
   max-height: 60%;
 }
@@ -124,6 +125,9 @@ p {
 #namebio {
   margin: auto;
   max-width: 74%;
+  p {
+    color: #49576d;
+  }
 }
 #namebio h1 {
   font-weight: 500;
@@ -189,8 +193,6 @@ ul {
     color: #4a5567;
     font-weight: 600;
     font-size: smaller;
-
-    /* Add your styling for the description here */
   }
 }
 #showallbtn {
@@ -217,14 +219,21 @@ ul {
     font-size: smaller;
   }
 }
-.error {
+.error,
+.loading {
   color: #4a5567;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  bottom: 30%;
 }
-.profile-container {
+.error2 {
+  color: #ff2d2d;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 @media only screen and (max-width: 767px) {
   .image-container img {
     height: 30vh;
@@ -241,8 +250,14 @@ ul {
       font-size: 2.5rem;
     }
     p {
-      color: #364153;
+      color: #49576d;
     }
+  }
+  #followers,
+  #following,
+  #location {
+    padding-left: 1%;
+    padding-right: 1%;
   }
 }
 .image-form {
