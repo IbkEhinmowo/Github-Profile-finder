@@ -10,8 +10,12 @@ export default function Image({ onUsernameSubmit }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        if (!username) {
+          setNames([]);
+          return;
+        }
         const response = await fetch(
-          `https://api.github.com/search/users?q=${username}&per_page=3`,
+          `https://api.github.com/search/users?q=${username}&per_page=5`,
         );
         const data = await response.json();
 
