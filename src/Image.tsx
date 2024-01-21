@@ -42,6 +42,9 @@ export default function Image({ onUsernameSubmit }) {
     const value = event.target.value;
     setUsername(value);
   };
+  const handlelist = () => {
+    onUsernameSubmit(username);
+  };
 
   return (
     <div className="image-container">
@@ -63,7 +66,12 @@ export default function Image({ onUsernameSubmit }) {
         <div id="user-list">
           <ul>
             {names.map((name, index) => (
-              <li key={index}>
+              <li
+                key={index}
+                onClick={() => {
+                  handlelist();
+                }}
+              >
                 <div id="namelist">
                   <img
                     src={name.avatar}
