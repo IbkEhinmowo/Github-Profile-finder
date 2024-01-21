@@ -1,8 +1,15 @@
 body {
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  font-style: normal;
   margin: 0;
   padding: 0%;
   background-color: #20293a;
+}
+body,
+html {
+  overflow-x: hidden !important;
 }
 .image-form {
   display: flex;
@@ -122,6 +129,7 @@ p {
 #followers,
 #following,
 #location {
+  font-family: "NTR", sans-serif;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -172,10 +180,11 @@ p {
 #namebio {
   margin: auto;
   max-width: 74%;
-  p {
-    color: #49576d;
-  }
 }
+#namebio p {
+  color: #49576d;
+}
+
 #namebio h1 {
   font-weight: 500;
 }
@@ -219,6 +228,7 @@ ul {
   margin: auto;
   max-width: 1250px;
 }
+
 .project-tile {
   display: flex;
   flex-direction: column;
@@ -242,6 +252,7 @@ ul {
   }
 }
 #showallbtn {
+  color: #fff;
   padding: 10px;
   text-align: center;
   border: none;
@@ -281,6 +292,9 @@ ul {
 }
 
 @media only screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
   #hero {
     height: 30vh;
     object-fit: cover;
