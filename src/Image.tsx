@@ -11,7 +11,7 @@ export default function Image({ onUsernameSubmit }) {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://api.github.com/search/users?q=${username}&per_page=5`,
+          `https://api.github.com/search/users?q=${username}&per_page=3`,
         );
         const data = await response.json();
 
@@ -42,8 +42,8 @@ export default function Image({ onUsernameSubmit }) {
     const value = event.target.value;
     setUsername(value);
   };
-  const handlelist = () => {
-    onUsernameSubmit(username);
+  const handlelist = (name) => {
+    onUsernameSubmit(name.name);
   };
 
   return (
@@ -69,7 +69,7 @@ export default function Image({ onUsernameSubmit }) {
               <li
                 key={index}
                 onClick={() => {
-                  handlelist();
+                  handlelist(name);
                 }}
               >
                 <div id="namelist">
