@@ -41,6 +41,7 @@ export default function Image({ onUsernameSubmit }) {
     event.preventDefault();
     console.log("Form submitted with username:", username);
     onUsernameSubmit(username);
+    setRender(false);
   };
 
   const handleInputChange = (event) => {
@@ -53,12 +54,11 @@ export default function Image({ onUsernameSubmit }) {
     setUsername(name.name);
     onUsernameSubmit(name.name);
     setRender(false);
-    fetchData();
   };
 
   const handleBlur = () => {
     console.log("Input blurred");
-    setRender(false);
+    setRender(true);
 
     console.log(render);
   };
