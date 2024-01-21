@@ -1,8 +1,15 @@
 body {
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: medium;
+  font-style: normal;
   margin: 0;
   padding: 0%;
   background-color: #20293a;
+}
+body,
+html {
+  overflow-x: hidden !important;
 }
 .image-form {
   display: flex;
@@ -10,11 +17,55 @@ body {
 }
 
 .search-bar {
+  position: relative;
   width: 24em;
   display: flex;
   background-color: #20293a;
   border-radius: 5px;
   overflow: hidden;
+}
+#user-list {
+  z-index: 100;
+  background-color: #070a14;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24em;
+  border-radius: 5px;
+  box-shadow: 20px 20px 60px #070a14;
+}
+#user-list ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#user-list li {
+  width: 100%;
+}
+#user-list li:hover {
+  cursor: pointer;
+  background-color: #2a303a;
+}
+#namelist {
+  padding-left: 15px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#namelist img {
+  width: 40px;
+  padding: 0%;
+  /* Add any additional styling for the image here */
+}
+
+#namelist p {
+  font-size: smaller;
+  padding-left: 20px;
+  /* Add any additional styling for the paragraph here */
 }
 
 input {
@@ -47,7 +98,7 @@ button:hover {
 .image-container svg {
   color: #fff;
 }
-.image-container img {
+#hero {
   margin: auto;
   width: 100vw;
   height: 40vh;
@@ -78,6 +129,7 @@ p {
 #followers,
 #following,
 #location {
+  font-family: "NTR", sans-serif;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -107,6 +159,9 @@ p {
   max-width: 100%;
   border-radius: 10%;
 }
+#avatar {
+  border-radius: 10%;
+}
 .profile-image {
   background-color: #20293a;
   position: relative;
@@ -125,10 +180,11 @@ p {
 #namebio {
   margin: auto;
   max-width: 74%;
-  p {
-    color: #49576d;
-  }
 }
+#namebio p {
+  color: #49576d;
+}
+
 #namebio h1 {
   font-weight: 500;
 }
@@ -172,6 +228,7 @@ ul {
   margin: auto;
   max-width: 1250px;
 }
+
 .project-tile {
   display: flex;
   flex-direction: column;
@@ -195,6 +252,7 @@ ul {
   }
 }
 #showallbtn {
+  color: #fff;
   padding: 10px;
   text-align: center;
   border: none;
@@ -234,7 +292,10 @@ ul {
 }
 
 @media only screen and (max-width: 767px) {
-  .image-container img {
+  body {
+    overflow-x: hidden;
+  }
+  #hero {
     height: 30vh;
     object-fit: cover;
   }
