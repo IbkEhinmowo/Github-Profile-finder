@@ -38,6 +38,7 @@ body {
   width: 100%;
 }
 #user-list li:hover {
+  cursor: pointer;
   background-color: #2a303a;
 }
 #namelist {
