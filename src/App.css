@@ -10,11 +10,53 @@ body {
 }
 
 .search-bar {
+  position: relative;
   width: 24em;
   display: flex;
   background-color: #20293a;
   border-radius: 5px;
   overflow: hidden;
+}
+#user-list {
+  background-color: #111729;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  width: 24em;
+
+  border-radius: 5px;
+}
+#user-list ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#user-list li {
+  width: 100%;
+}
+#user-list li:hover {
+  background-color: #2a303a;
+}
+#namelist {
+  padding-left: 15px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#namelist img {
+  width: 40px;
+  padding: 0%;
+  /* Add any additional styling for the image here */
+}
+
+#namelist p {
+  padding-left: 20px;
+  /* Add any additional styling for the paragraph here */
 }
 
 input {
@@ -47,7 +89,7 @@ button:hover {
 .image-container svg {
   color: #fff;
 }
-.image-container img {
+#hero {
   margin: auto;
   width: 100vw;
   height: 40vh;
@@ -105,6 +147,9 @@ p {
 
 .profile-image img {
   max-width: 100%;
+  border-radius: 10%;
+}
+#avatar {
   border-radius: 10%;
 }
 .profile-image {
@@ -234,7 +279,7 @@ ul {
 }
 
 @media only screen and (max-width: 767px) {
-  .image-container img {
+  #hero {
     height: 30vh;
     object-fit: cover;
   }
