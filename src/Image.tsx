@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Image({ onUsernameSubmit }) {
-  const [username, setUsername] = useState("github");
+  const [username, setUsername] = useState("");
   const [names, setNames] = useState([]);
+  const [render, setRender] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,9 +46,21 @@ export default function Image({ onUsernameSubmit }) {
   const handleInputChange = (event) => {
     const value = event.target.value;
     setUsername(value);
+    setRender(true);
+    console.log(render);
   };
   const handlelist = (name) => {
+    setUsername(name.name);
     onUsernameSubmit(name.name);
+    setRender(false);
+    fetchData();
+  };
+
+  const handleBlur = () => {
+    console.log("Input blurred");
+    setRender(false);
+
+    console.log(render);
   };
 
   return (
@@ -59,6 +72,7 @@ export default function Image({ onUsernameSubmit }) {
             value={username}
             placeholder="Enter GitHub username"
             onChange={handleInputChange}
+            // Handle the onBlur event
           />
           <button type="submit">
             <FontAwesomeIcon icon={faSearch} />
@@ -66,7 +80,7 @@ export default function Image({ onUsernameSubmit }) {
         </div>
       </form>
       <img src={heroImage} alt="Hero" id="hero" />
-      {names.length > 0 && (
+      {names.length > 0 && render && (
         <div id="user-list">
           <ul>
             {names.map((name, index) => (
@@ -75,6 +89,7 @@ export default function Image({ onUsernameSubmit }) {
                 onClick={() => {
                   handlelist(name);
                 }}
+                onBlur={handleBlur}
               >
                 <div id="namelist">
                   <img
