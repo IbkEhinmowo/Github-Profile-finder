@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Image({ onUsernameSubmit }) {
-  const [username, setUsername] = useState("");
-  const [names, setNames] = useState([]);
-  const [render, setRender] = useState(true);
+  const [username, setUsername] = useState<string>("");
+  const [names, setNames] = useState<any>([]);
+  const [render, setRender] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -70,7 +70,7 @@ export default function Image({ onUsernameSubmit }) {
           <input
             type="text"
             value={username}
-            placeholder="Enter GitHub username"
+            placeholder="search GitHub username"
             onChange={handleInputChange}
             // Handle the onBlur event
           />
