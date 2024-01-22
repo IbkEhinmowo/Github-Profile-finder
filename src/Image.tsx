@@ -56,13 +56,6 @@ export default function Image({ onUsernameSubmit }) {
     setRender(false);
   };
 
-  const handleBlur = () => {
-    console.log("Input blurred");
-    setRender(true);
-
-    console.log(render);
-  };
-
   return (
     <div className="image-container">
       <form onSubmit={handleFormSubmit} className="image-form">
@@ -89,7 +82,6 @@ export default function Image({ onUsernameSubmit }) {
                 onClick={() => {
                   handlelist(name);
                 }}
-                onBlur={handleBlur}
               >
                 <div id="namelist">
                   <img
