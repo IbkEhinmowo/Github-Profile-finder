@@ -91,6 +91,7 @@ export default function Image({ onUsernameSubmit }) {
                     width="20px"
                   />
                   <p>{name.name}</p>
+                  <p id="bio">{name.bio}</p>
                 </div>
               </li>
             ))}

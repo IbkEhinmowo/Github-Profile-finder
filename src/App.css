@@ -292,6 +292,9 @@ ul {
   left: 50%;
   transform: translateX(-50%);
 }
+#bio {
+  color: #4a5567;
+}
 
 @media only screen and (max-width: 767px) {
   body {
