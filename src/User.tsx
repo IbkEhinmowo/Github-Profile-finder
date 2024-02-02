@@ -55,7 +55,10 @@ export default function User({ searchedName, onUserDataUpdate }) {
           <div className="main">
             <div className="profile-container">
               <div className="profile-image">
-                <img src={userData.avatar_url} alt="Profile" />
+                <img
+                  src={userData.avatar_url}
+                  alt={`${userData.name}'s Avatar`}
+                />
               </div>
               <div className="user-info">
                 <div id="followers">
