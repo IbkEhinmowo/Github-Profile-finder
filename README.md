@@ -1,10 +1,9 @@
 # GitHub Profile Search Application
 
 ## Demo URL
-The live, deployed instance of your application: [link-to-live-demo](https://your-live-demo-link.com)
+The live, deployed instance of your application: [link-to-live-demo](https://codesandbox.io/p/github/IbkEhinmowo/Github%20Profile%20finder)
 
-## Repository URL
-The GitHub repository containing your code: [link-to-repo](https://github.com/your-username/github-profile-search)
+
 
 ## Table of Contents
 - [Overview](#overview)
