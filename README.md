@@ -1,4 +1,6 @@
-# GitHub Profile Search Application
+# GitHub Profile finder Application
+![Screenshot 2024-02-11 at 11 36 27 PM](https://github.com/IbkEhinmowo/Github-Profile-finder/assets/142057631/9e6555be-7e05-4744-8aa7-738ac4bd6d2c)
+
 
 ## Demo URL
 The live, deployed instance of your application: [link-to-live-demo](https://codesandbox.io/p/github/IbkEhinmowo/Github%20Profile%20finder)
@@ -30,6 +32,7 @@ This web application provides an interface for users to search for GitHub profil
 - As a GitHub enthusiast, I want to discover fascinating profiles and the repositories people contribute to.
 
 ## Technologies
+- CSS - Styling
 - React.js - Interactivity and data fetching
 - GitHub REST API - Fetching profile and repository data
 
