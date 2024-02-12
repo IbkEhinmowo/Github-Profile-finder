@@ -32,6 +32,7 @@ This web application provides an interface for users to search for GitHub profil
 - As a GitHub enthusiast, I want to discover fascinating profiles and the repositories people contribute to.
 
 ## Technologies
+- CSS - Styling
 - React.js - Interactivity and data fetching
 - GitHub REST API - Fetching profile and repository data
 
