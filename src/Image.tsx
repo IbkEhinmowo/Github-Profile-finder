@@ -18,6 +18,12 @@ export default function Image({ onUsernameSubmit }) {
         const response = await fetch(
           `https://api.github.com/search/users?q=${username}&per_page=5`,
         );
+
+        if (response.status === 403) {
+          console.error("API rate limit exceeded. Please try again later.");
+          setNames([]);
+          return;
+        }
         const data = await response.json();
 
         if (data.items) {
@@ -30,6 +36,7 @@ export default function Image({ onUsernameSubmit }) {
         }
       } catch (error) {
         console.error("Error fetching usernames:", error);
+        return;
         setNames([]); // Set names to an empty array in case of an error
       }
     };
