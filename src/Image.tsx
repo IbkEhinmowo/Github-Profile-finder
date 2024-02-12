@@ -23,6 +23,7 @@ export default function Image({ onUsernameSubmit }) {
           console.error("API rate limit exceeded. Please try again later.");
           setNames([]);
           return;
+          // <div className="error2">Error: {response.statusText}</div>;
         }
         const data = await response.json();
 
