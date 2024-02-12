@@ -1,4 +1,6 @@
 # GitHub Profile Search Application
+![Screenshot 2024-02-11 at 11 36 27 PM](https://github.com/IbkEhinmowo/Github-Profile-finder/assets/142057631/9e6555be-7e05-4744-8aa7-738ac4bd6d2c)
+
 
 ## Demo URL
 The live, deployed instance of your application: [link-to-live-demo](https://codesandbox.io/p/github/IbkEhinmowo/Github%20Profile%20finder)
