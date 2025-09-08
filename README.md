@@ -3,7 +3,7 @@
 
 
 ## Demo URL
-The live, deployed instance of your application: [link-to-live-demo](https://codesandbox.io/p/github/IbkEhinmowo/Github%20Profile%20finder)
+The live instance of my application with code review: [link-to-live-demo](https://codesandbox.io/p/github/IbkEhinmowo/Github%20Profile%20finder)
 
 
 
@@ -59,5 +59,6 @@ This web application provides an interface for users to search for GitHub profil
 none
 ## Limitations
 - **API Rate Limits:** The GitHub REST API has rate limits to prevent abuse. If you exceed these limits, the application may temporarily stop fetching data until the rate limit resets.
+
 
 
